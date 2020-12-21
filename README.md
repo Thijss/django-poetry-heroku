@@ -20,6 +20,14 @@ The project uses `poetry` for python packaging and dependency manangement.
     ```
 3. Review & update the info in `pyproject.toml`
 
+4. Remove the git repo and start a new one.
+    ```bash
+    rm -rf .git
+    git init
+    git add .
+    git commit -m "Initial commit"    
+    ```
+
 ## Installation
 
 1. Create and activate a virtualenv:
