@@ -34,4 +34,4 @@ Supporting databases can be found [here](https://django-environ.readthedocs.io/e
 ### SECRET_KEY
 Specifies [Django's secret key](https://docs.djangoproject.com/en/3.1/ref/settings/#std:setting-SECRET_KEY):
 * Any string will do for local development
-* For a production environment you can generate a key [here](https://djecrety.ir/) 
+* For a production environment you can generate a key [here](https://djecrety.ir/)

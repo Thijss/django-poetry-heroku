@@ -3,7 +3,6 @@ import sys
 from pathlib import Path
 
 import environ
-
 from django.core.management import execute_from_command_line
 
 BASE_DIR = Path(__file__).resolve().parent

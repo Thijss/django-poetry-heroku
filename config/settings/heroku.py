@@ -2,7 +2,7 @@
 # pylint: disable=wildcard-import,unused-wildcard-import,relative-beyond-top-level
 import django_heroku
 
-from .base import *
+from .base import *  # noqa
 
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 

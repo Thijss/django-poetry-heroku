@@ -1,6 +1,6 @@
 """Settings for running the project in a local environment."""
 # pylint: disable=wildcard-import,unused-wildcard-import,relative-beyond-top-level
-from .base import *
+from .base import *  # noqa
 
 ALLOWED_HOSTS = []
 
