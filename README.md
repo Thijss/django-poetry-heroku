@@ -8,6 +8,17 @@ The project uses `poetry` for python packaging and dependency manangement.
 - Python 3.6 or higher ([link](https://www.python.org/downloads/))
 - poetry ([link](https://python-poetry.org/docs/#installation))
 
+## Usage
+1. Clone the repository into `<your_project_name>_project`
+    ```bash
+    git clone git@github.com:Thijss/django-poetry-heroku.git <your_project_name>_project
+    ```
+2. Rename the folder `projectname` to `<your_project_name>`
+    ```bash
+    cd <your_project_name>_project
+    mv projectname <your_project_name>
+    ```
+3. Review & update the info in `pyproject.toml`
 
 ## Installation
 
