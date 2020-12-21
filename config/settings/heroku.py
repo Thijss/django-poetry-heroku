@@ -4,6 +4,7 @@ import django_heroku
 
 from .base import *
 
+# TODO: Add settings from Django's deployment checklist
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 django_heroku.settings(locals())
