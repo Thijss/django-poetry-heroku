@@ -1,0 +1,11 @@
+### Secrets ###
+.env
+
+### Pycharm ###
+.idea
+
+### Python ###
+__pycache__/
+
+### Virtual environments ###
+.venv
