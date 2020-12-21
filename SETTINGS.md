@@ -8,14 +8,14 @@ Additionally, in order to run the project, some environment variables need to be
 
 ## Environment variables
 
-#### DJANGO_SETTINGS_MODULE
+### DJANGO_SETTINGS_MODULE
 
 Specifies which settings file to use:
 
 * `config.settings.local`
 * `config.settings.heroku`
 
-#### DEBUG
+### DEBUG
 Specifies whether [Django's debug mode](https://docs.djangoproject.com/en/3.1/ref/settings/#debug) is turned on/off:
 * `on`
 * `off`
@@ -23,15 +23,15 @@ Specifies whether [Django's debug mode](https://docs.djangoproject.com/en/3.1/re
 Never deploy a site into production with DEBUG turned `on`.
 
 
-#### DATABASE_URL
+### DATABASE_URL
 Specifies which database to connect to:
 * `postgres://USER:PASSWORD@HOST:PORT/NAME`
 * `sqlite:///PATH`
 
-Using [django-environ](https://django-environ.readthedocs.io/en/latest/), the url is parsed to a specific database configuration. 
+Using [django-environ](https://django-environ.readthedocs.io/en/latest/), the url is parsed to a specific database configuration.
 Supporting databases can be found [here](https://django-environ.readthedocs.io/en/latest/#documentation).
 
-#### SECRET_KEY
+### SECRET_KEY
 Specifies [Django's secret key](https://docs.djangoproject.com/en/3.1/ref/settings/#std:setting-SECRET_KEY):
 * Any string will do for local development
 * For a production environment you can generate a key [here](https://djecrety.ir/) 

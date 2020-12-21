@@ -5,28 +5,9 @@ The project uses `poetry` for python packaging and dependency manangement.
 
 ## Prerequisities
 
-- Python 3.6 or higher (https://www.python.org/downloads/)
-- Poetry (https://python-poetry.org/docs/#installation)
+- Python 3.6 or higher ([link](https://www.python.org/downloads/))
+- poetry ([link](https://python-poetry.org/docs/#installation))
 
-## Usage
-1. Clone the repository into `<your_project_name>_project`
-    ```bash
-    git clone git@github.com:Thijss/django-poetry-heroku.git <your_project_name>_project
-    ```
-2. Rename the folder `projectname` to `<your_project_name>`
-    ```bash
-    cd <your_project_name>_project
-    mv projectname <your_project_name>
-    ```
-3. Review & update the info in `pyproject.toml`
-
-4. Remove the git repo and start a new one.
-    ```bash
-    rm -rf .git
-    git init
-    git add .
-    git commit -m "Initial commit"    
-    ```
 
 ## Installation
 
@@ -53,11 +34,11 @@ Afterwards, open the `.env` file and change the file contents as you see fit.
 You can find detailed descriptions of each variable in [SETTINGS](SETTINGS.md).
 
 ## Deployment (Heroku)
-
-
-#### Heroku app
 Make sure you've got a [Heroku account](https://signup.heroku.com/)
 and a working [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install):
+
+### Heroku app
+Login to your account:
 ```bash
 heroku login
 ```
@@ -74,13 +55,13 @@ heroku buildpacks:add https://github.com/moneymeets/python-poetry-buildpack.git
 heroku buildpacks:add heroku/python
 ```
 
-#### Database
+### Database
 Add a database to your Heroku app:
 ```bash
 heroku addons:create heroku-postgresql:hobby-dev --name=<your_project_name>-pg
 ```
 
-#### Environment variables
+### Environment variables
 In order to run the project, some environment variables need to be set (see [SETTINGS](SETTINGS.md)).
 ```bash
 heroku config:set DJANGO_SETTINGS_MODULE=config.settings.heroku
@@ -91,7 +72,7 @@ heroku config:set DEBUG=off
 heroku config:set SECRET_KEY=<generated_secret_key>
 ```
 
-#### Deploy
+### Deploy
 Deploy your project:
 ```bash
 git push heroku
