@@ -1,25 +1,28 @@
-name: Super-Linter
+name: Lint the Code
 
-# Run this workflow every time a new commit pushed to your repository
-on: push
+on:
+  push:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
-  # Set the job key. The key is displayed as the job name
-  # when a job name is not provided
-  super-lint:
-    # Name the Job
-    name: Lint code base
-    # Set the type of machine to run on
+  linting:
+    name: Linting and Testing code
     runs-on: ubuntu-latest
-
     steps:
-      # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      # Runs the Super-Linter action
-      - name: Run Super-Linter
-        uses: github/super-linter@v3
-        env:
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.9.1
+      - name: Install Poetry
+        run: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+      - name: Poetry initialize & export to requirements.txt (including dev-dependencies)
+        run: |
+          source $HOME/.poetry/env
+          poetry export -f requirements.txt --output requirements.txt --dev
+      - run: pip install -r requirements.txt
+      - run: pycodestyle
+      - run: black --check .
+      - run: pylint config portal
