@@ -25,4 +25,5 @@ jobs:
       - run: pip install -r requirements.txt
       - run: pycodestyle
       - run: black --check .
-      - run: pylint config portal
+      - run: pylint $(pwd)
+
