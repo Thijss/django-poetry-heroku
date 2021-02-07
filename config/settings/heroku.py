@@ -28,7 +28,7 @@ MIDDLEWARE += ["whitenoise.middleware.WhiteNoiseMiddleware"]
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
-if SENTRY_URL := env("SENTRY_URL", ""):
+if SENTRY_URL := env("SENTRY_URL", default=""):
     sentry_sdk.init(
         dsn=SENTRY_URL,
         integrations=[DjangoIntegration()],
