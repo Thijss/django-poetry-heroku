@@ -80,7 +80,7 @@ heroku config:set DEBUG=off
 ```
 [Generate](https://djecrety.ir/) and set a secret key
 ```bash
-heroku config:set SECRET_KEY=<generated_secret_key>
+heroku config:set DJANGO_SECRET_KEY=<generated_secret_key>
 ```
 
 ### Deploy
